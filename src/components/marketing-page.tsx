@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IconArrowDown, IconCheck, IconMail, IconPhone, IconSend } from "@tabler/icons-react";
+import { IconArrowDown, IconCheck, IconMail, IconSend } from "@tabler/icons-react";
 import { getSiteCopy, siteConfig, type Locale } from "@/content/site";
 import { createStructuredData, serializeStructuredData } from "@/lib/structured-data";
 import { BrandLogo } from "./brand-logo";
@@ -335,7 +335,6 @@ export function MarketingPage({ locale }: { locale: Locale }) {
             <div className="site-footer__contact">
               <a href={siteConfig.instagramProfileUrl} target="_blank" rel="noreferrer"><InstagramIcon />{siteConfig.instagramHandle}</a>
               <a href={`mailto:${siteConfig.email}`}><IconMail aria-hidden="true" size={18} />{siteConfig.email}</a>
-              <a href={`tel:${siteConfig.phoneHref}`}><IconPhone aria-hidden="true" size={18} />{siteConfig.phoneDisplay}</a>
             </div>
             <p>{locale === "de" ? "Personal Training in Wien nach Vereinbarung · Online-Coaching auf Anfrage" : "Personal training in Vienna by arrangement · Online coaching on request"}</p>
           </div>

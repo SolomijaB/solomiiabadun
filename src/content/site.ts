@@ -168,8 +168,6 @@ export interface SiteConfig {
   domain: string;
   url: string;
   email: string;
-  phoneDisplay: string;
-  phoneHref: string;
   address: string;
   instagramHandle: string;
   instagramProfileUrl: string;
@@ -272,8 +270,6 @@ export const siteConfig: SiteConfig = {
   domain: "solomiiabadun.com",
   url: "https://solomiiabadun.com",
   email: "solomiiabadun@outlook.com",
-  phoneDisplay: "+43 677 61993259",
-  phoneHref: "+4367761993259",
   address: "Phorusgasse 2, 1040 Wien, Österreich",
   instagramHandle: "@notyourmorningroutine",
   instagramProfileUrl: "https://www.instagram.com/notyourmorningroutine/",

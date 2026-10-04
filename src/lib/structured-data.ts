@@ -83,7 +83,6 @@ export function createStructuredData(
         ? "Strength Coach für Frauen"
         : "Strength coach for women",
     email: `mailto:${siteConfig.email}`,
-    telephone: siteConfig.phoneHref,
     sameAs: [siteConfig.instagramProfileUrl],
     knowsLanguage: ["de", "en", "uk"],
     knowsAbout: [

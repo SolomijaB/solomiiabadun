@@ -22,7 +22,7 @@ Die Referenzseiten werden nicht kopiert. Inhalte, Fotos, Bewertungen, Qualifikat
 
 - Marke und Rechtsträgerin: Solomiia Badun, Einzelunternehmen in Gründung.
 - Adresse: Phorusgasse 2, 1040 Wien, Österreich.
-- Kontakt: `solomiiabadun@outlook.com`, `+43 677 61993259`.
+- Kontakt: `solomiiabadun@outlook.com`.
 - Instagram: `@notyourmorningroutine`.
 - Coaching-Sprachen: Deutsch, Englisch und Ukrainisch.
 - Trainingsort: Wien nach Vereinbarung; Online-Coaching auf Anfrage.

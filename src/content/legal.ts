@@ -92,11 +92,6 @@ const germanLegalNotice: LegalPageContent = {
           value: siteConfig.email,
           href: `mailto:${siteConfig.email}`,
         },
-        {
-          label: "Telefon",
-          value: siteConfig.phoneDisplay,
-          href: `tel:${siteConfig.phoneHref}`,
-        },
       ],
     },
     {
@@ -156,11 +151,6 @@ const germanPrivacy: LegalPageContent = {
           value: siteConfig.email,
           href: `mailto:${siteConfig.email}`,
         },
-        {
-          label: "Telefon",
-          value: siteConfig.phoneDisplay,
-          href: `tel:${siteConfig.phoneHref}`,
-        },
       ],
     },
     {
@@ -215,7 +205,7 @@ const germanPrivacy: LegalPageContent = {
         "Über das Kontaktformular werden Vorname, E-Mail-Adresse, Telefonnummer und der frei eingegebene Nachrichtentext verarbeitet. Beim Absenden werden diese Angaben direkt aus dem Browser an FormSubmit übermittelt und von FormSubmit an das im Impressum genannte E-Mail-Postfach weitergeleitet. Die Angaben werden ausschließlich zur Bearbeitung der Anfrage sowie zur Anbahnung einer möglichen Zusammenarbeit verwendet. Das Formular ist nicht von einer Statistik-Einwilligung abhängig.",
         "Die Website speichert Formularinhalte nicht in einer eigenen Datenbank. Zum Schutz vor automatisiertem Missbrauch wird ein unsichtbares Honeypot-Prüffeld mitgesendet. FormSubmit gibt in seiner Dokumentation an, Formulareinreichungen für 30 Tage vorzuhalten.",
         "Die Verarbeitung erfolgt bei vertragsbezogenen Anfragen gemäß Art. 6 Abs. 1 lit. b DSGVO und bei sonstigen Anfragen aufgrund des berechtigten Interesses an einer verlässlichen Kommunikation gemäß Art. 6 Abs. 1 lit. f DSGVO. Nachrichten verbleiben im Empfängerpostfach nur so lange, wie dies für die Bearbeitung und mögliche gesetzliche Aufbewahrungspflichten erforderlich ist.",
-        "Bitte übermitteln Sie über das Formular keine Diagnosen, medizinischen Unterlagen oder andere besonders sensible Informationen. Alternativ ist eine Kontaktaufnahme über die im Impressum genannten E-Mail- und Telefondaten möglich.",
+        "Bitte übermitteln Sie über das Formular keine Diagnosen, medizinischen Unterlagen oder andere besonders sensible Informationen. Alternativ ist eine Kontaktaufnahme über die im Impressum genannten E-Mail-Daten möglich.",
       ],
       links: [
         {
@@ -301,11 +291,6 @@ const englishLegalNotice: LegalPageContent = {
           value: siteConfig.email,
           href: `mailto:${siteConfig.email}`,
         },
-        {
-          label: "Phone",
-          value: siteConfig.phoneDisplay,
-          href: `tel:${siteConfig.phoneHref}`,
-        },
       ],
     },
     {
@@ -365,11 +350,6 @@ const englishPrivacy: LegalPageContent = {
           value: siteConfig.email,
           href: `mailto:${siteConfig.email}`,
         },
-        {
-          label: "Phone",
-          value: siteConfig.phoneDisplay,
-          href: `tel:${siteConfig.phoneHref}`,
-        },
       ],
     },
     {
@@ -424,7 +404,7 @@ const englishPrivacy: LegalPageContent = {
         "The contact form processes your first name, email address, phone number and the message you enter. When you submit the form, this information is sent directly from your browser to FormSubmit and forwarded by FormSubmit to the email inbox listed in the legal notice. It is used only to respond to your enquiry and discuss a potential working relationship. The form does not depend on statistics consent.",
         "The website does not store form content in its own database. A hidden honeypot field is submitted to reduce automated misuse. FormSubmit states in its documentation that form submissions are retained for 30 days.",
         "For enquiries relating to a potential contract, the legal basis is Article 6(1)(b) GDPR. Other enquiries are processed on the basis of the legitimate interest in reliable communication under Article 6(1)(f) GDPR. Messages remain in the recipient inbox only for as long as necessary to respond and meet any applicable legal retention duties.",
-        "Please do not submit diagnoses, medical records or other particularly sensitive information through this form. You can alternatively use the email address or phone number listed in the legal notice.",
+        "Please do not submit diagnoses, medical records or other particularly sensitive information through this form. You can alternatively use the email address listed in the legal notice.",
       ],
       links: [
         {
