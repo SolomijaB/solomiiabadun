@@ -1,7 +1,12 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const productionDirectories = ["out"];
+// Der Build läuft je nach Ausgabemodus als statischer Export (`out/`)
+// oder als OpenNext/Standalone-Build (`.next/`). Es werden nur vorhandene
+// Verzeichnisse geprüft, damit das Gate in beiden Modi funktioniert.
+const productionDirectories = [".next", "out"];
+const excludedDirectoryNames = new Set(["cache"]);
+
 const forbiddenSnippets = [
   "BEISPIEL – NICHT VERÖFFENTLICHEN",
   "EXAMPLE — DO NOT PUBLISH",
@@ -25,13 +30,28 @@ function hasSearchableExtension(fileName) {
 }
 
 async function collectFiles(directory) {
-  const entries = await readdir(directory, { withFileTypes: true });
+  let entries;
+
+  try {
+    entries = await readdir(directory, { withFileTypes: true });
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return [];
+    }
+
+    throw error;
+  }
+
   const files = [];
 
   for (const entry of entries) {
     const absolutePath = join(directory, entry.name);
 
     if (entry.isDirectory()) {
+      if (excludedDirectoryNames.has(entry.name)) {
+        continue;
+      }
+
       files.push(...(await collectFiles(absolutePath)));
     } else if (entry.isFile() && hasSearchableExtension(entry.name)) {
       files.push(absolutePath);
