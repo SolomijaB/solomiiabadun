@@ -1,7 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const productionDirectories = [".next/server", ".next/static"];
+const productionDirectories = ["out"];
 const forbiddenSnippets = [
   "BEISPIEL – NICHT VERÖFFENTLICHEN",
   "EXAMPLE — DO NOT PUBLISH",
