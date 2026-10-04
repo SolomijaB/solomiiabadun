@@ -40,13 +40,16 @@ Die erste echte Einsendung löst bei FormSubmit eine Aktivierungs-E-Mail an dies
 - `npm run validate:launch` bleibt absichtlich rot, bis alle rechtlichen und markenbezogenen Freigaben vorliegen.
 - Die automatisch vektorisierte Logoauswahl liegt unter `public/brand/`; alle drei KI-Entwürfe und ihre Prompt-Dokumentation bleiben nachvollziehbar im Repository.
 
-## Vercel-Konfiguration
+## Cloudflare Pages-Konfiguration
 
-- Projektname: `solomiia-badun`
-- Production Branch: `main`
-- Kanonische Domain: `solomiiabadun.com`
-- Tarif: bestehendes Pro-Team
-- Messung: Vercel Web Analytics, ausschließlich nach Statistik-Einwilligung
+Die Website wird als statischer Export gebaut (`output: "export"` in `next.config.ts`). `npm run build` erzeugt das vollständige Deployment-Verzeichnis `out/`, das direkt auf Cloudflare Pages veröffentlicht werden kann.
+
+- Framework-Preset: Next.js (Static Export)
+- Build command: `npm run build`
+- Build output directory: `out`
+- Node.js-Version: `24` (wird über die Datei `.node-version` im Projektstamm gesteuert)
+- Der Redirect `/home` → `/` läuft über die Datei `public/_redirects` im Cloudflare-Pages-`_redirects`-Format
+- Messung: Vercel Web Analytics läuft als clientseitiges Skript auch auf Cloudflare Pages, ausschließlich nach Statistik-Einwilligung
 - E-Mail-Versand: FormSubmit, direkte AJAX-Übermittlung mit nativem Formular-Fallback; Empfänger laut Impressum
 
-Projektanbindung, Domain-Zuweisung und Analytics-Aktivierung werden im Zuge der vorläufigen Veröffentlichung eingerichtet. FormSubmit benötigt keine Vercel-Umgebungsvariablen; Empfänger-Aktivierung und echte Testzustellung bleiben ein separater Prüfschritt. Die Search-Console-Einreichung erfolgt anschließend separat.
+FormSubmit benötigt keine Umgebungsvariablen; Empfänger-Aktivierung und echte Testzustellung bleiben ein separater Prüfschritt. Die Search-Console-Einreichung erfolgt anschließend separat.
