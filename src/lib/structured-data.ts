@@ -23,13 +23,6 @@ export interface StructuredDataDocument {
   "@graph": JsonLdNode[];
 }
 
-const offerPrices: Record<string, number> = {
-  "START STRONG": 0,
-  "PERSONAL STRENGTH": 80,
-  "STRENGTH SERIES": 640,
-  "STRONG TOGETHER": 120,
-};
-
 export function createStructuredData(
   locale: Locale,
 ): StructuredDataDocument {
@@ -39,28 +32,12 @@ export function createStructuredData(
   const serviceId = absoluteUrl(`${copy.path}#personal-training`);
   const coachingUrl = absoluteUrl(`${copy.path}#coaching`);
 
-  const offers: JsonLdNode[] = copy.offers.items.map((offer) => {
-    const pricing = offerPrices[offer.name];
-
-    return {
-      "@type": "Offer",
-      name: offer.name,
-      description: offer.body,
-      url: coachingUrl,
-      ...(pricing !== undefined
-        ? {
-            price: pricing,
-            priceCurrency: "EUR",
-            priceSpecification: {
-              "@type": "UnitPriceSpecification",
-              price: pricing,
-              priceCurrency: "EUR",
-              unitText: offer.duration,
-            },
-          }
-        : {}),
-    };
-  });
+  const offers: JsonLdNode[] = copy.offers.items.map((offer) => ({
+    "@type": "Offer",
+    name: offer.name,
+    description: offer.body,
+    url: coachingUrl,
+  }));
 
   const website: JsonLdNode = {
     "@type": "WebSite",
