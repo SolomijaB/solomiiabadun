@@ -61,6 +61,6 @@ describe("structured data", () => {
     expect(service?.name).toBe(
       "Personal training for women in Vienna and online",
     );
-    expect(service?.offers).toHaveLength(5);
+    expect(service?.offers).toHaveLength(2);
   });
 });
